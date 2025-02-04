@@ -1,0 +1,53 @@
+.recent-searches {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.recent-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.recent-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #888;
+}
+
+.clear-button {
+  background: none;
+  border: none;
+  color: #646cff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+.clear-button:hover {
+  text-decoration: underline;
+}
+
+.recent-list {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.city-button {
+  background: rgba(100, 108, 255, 0.1);
+  border: 1px solid rgba(100, 108, 255, 0.2);
+  color: #646cff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.city-button:hover {
+  background: rgba(100, 108, 255, 0.2);
+} 

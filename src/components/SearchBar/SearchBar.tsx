@@ -20,10 +20,15 @@ export function SearchBar({ onSearch, loading }: SearchBarProps) {
         value={city}
         onChange={(e) => setCity(e.target.value)}
         placeholder="Enter city name"
-        onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
+        onKeyPress={(e) => e.key === 'Enter' && !loading && handleSearch()}
+        disabled={loading}
       />
-      <button onClick={handleSearch} disabled={loading}>
-        {loading ? 'Loading...' : 'Get Weather'}
+      <button 
+        onClick={handleSearch} 
+        disabled={loading}
+        className={loading ? 'loading' : ''}
+      >
+        {loading ? 'Searching...' : 'Get Weather'}
       </button>
     </div>
   )

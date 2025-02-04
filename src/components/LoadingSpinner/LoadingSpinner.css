@@ -1,0 +1,41 @@
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.spinner-ring {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(100, 108, 255, 0.1);
+  border-radius: 50%;
+  border-top-color: #646cff;
+  position: relative;
+  animation: spinner 0.6s linear infinite;
+}
+
+.spinner-ring::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border: 3px solid transparent;
+  border-top-color: rgba(100, 108, 255, 0.3);
+  border-radius: 50%;
+  animation: spinner 1s linear infinite reverse;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner p {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 0;
+} 
