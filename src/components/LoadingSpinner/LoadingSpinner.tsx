@@ -1,7 +1,21 @@
-export function LoadingSpinner() {
+import { ClipLoader } from 'react-spinners'
+
+interface LoadingSpinnerProps {
+  color?: string;
+  size?: number;
+}
+
+export function LoadingSpinner({ 
+  color = '#646cff',
+  size = 40 
+}: LoadingSpinnerProps) {
   return (
     <div className="loading-spinner">
-      <div className="spinner-ring"></div>
+      <ClipLoader
+        color={color}
+        size={size}
+        aria-label="Loading..."
+      />
     </div>
   )
 } 
