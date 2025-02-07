@@ -46,7 +46,7 @@ export function WeatherPage() {
 
   return (
     <div className="weather-page">
-      <h1>Weather App</h1>
+      <h1>Open Weather</h1>
       <SearchBar onSearch={handleSearch} loading={loading} />
       <RecentSearches 
         searches={recentSearches}

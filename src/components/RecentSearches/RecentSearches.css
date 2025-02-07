@@ -25,9 +25,11 @@
   font-size: 0.9rem;
   cursor: pointer;
   padding: 0.25rem 0.5rem;
+  transition: all 0.2s;
 }
 
 .clear-button:hover {
+  color: #ffffff;
   text-decoration: underline;
 }
 
@@ -38,16 +40,25 @@
 }
 
 .city-button {
-  background: rgba(100, 108, 255, 0.1);
-  border: 1px solid rgba(100, 108, 255, 0.2);
-  color: #646cff;
-  padding: 0.25rem 0.75rem;
-  border-radius: 16px;
+  background-color: rgba(100, 108, 255, 0.8);
+  border: none;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
   font-size: 0.9rem;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
 }
 
 .city-button:hover {
-  background: rgba(100, 108, 255, 0.2);
+  background: rgb(252, 250, 250);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+}
+
+.city-button:active {
+  transform: translateY(0);
+  background: rgba(255, 255, 255, 0.05);
 } 
