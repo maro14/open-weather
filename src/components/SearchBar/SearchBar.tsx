@@ -41,6 +41,14 @@ export function SearchBar({ onSearch, loading }: SearchBarProps) {
       >
         {loading ? 'Searching...' : 'Get Weather'}
       </button>
+      <button 
+        type="button"
+        onClick={() => setCity('')}
+        disabled={loading}
+        aria-label="Clear"
+      >
+        Clear
+      </button>
       {error && <p id="errorMessage" className="error-message">{error}</p>}
     </form>
   )
