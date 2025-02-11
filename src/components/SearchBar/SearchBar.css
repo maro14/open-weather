@@ -50,4 +50,14 @@ button:active:not(:disabled) {
 button:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
-} 
+}
+
+
+.search-container .clear-button {
+  background-color: red;
+  color: white;
+}
+
+.search-container .clear-button:hover {
+  background-color: darkred;
+}

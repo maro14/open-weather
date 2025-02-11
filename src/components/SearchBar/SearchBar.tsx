@@ -45,6 +45,7 @@ export function SearchBar({ onSearch, loading }: SearchBarProps) {
         type="button"
         onClick={() => setCity('')}
         disabled={loading}
+        className="clear-button"
         aria-label="Clear"
       >
         Clear
