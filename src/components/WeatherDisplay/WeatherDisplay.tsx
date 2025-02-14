@@ -1,3 +1,4 @@
+// src/components/WeatherDisplay/WeatherDisplay.tsx
 import { useState } from 'react';
 import { WeatherData } from '../../types/weather'
 import './WeatherDisplay.css'

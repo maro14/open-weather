@@ -1,3 +1,4 @@
+/* src/App.css */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,18 +6,6 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
 
 @keyframes logo-spin {
   from {
@@ -48,9 +37,6 @@
   margin: 0 auto;
 }
 
-.search-container {
-  margin: 2rem 0;
-}
 
 input {
   padding: 0.5rem;
@@ -59,35 +45,6 @@ input {
   border: 1px solid #ccc;
   border-radius: 4px;
   width: 200px;
-}
-
-button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  background-color: #646cff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:disabled {
-  background-color: #cccccc;
-  cursor: not-allowed;
-}
-
-.weather {
-  margin-top: 2rem;
-  padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-}
-
-.weather-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 .error {

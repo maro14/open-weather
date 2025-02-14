@@ -1,18 +1,110 @@
+/* src/components/WeatherDisplay/WeatherDisplay.css */
 .weather {
-  margin-top: 2rem;
+  margin: 2rem auto;
   padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  max-width: 600px;
+  transition: all 0.3s ease;
+}
+
+.weather:hover {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+}
+
+.weather h2 {
+  margin: 0 0 1.5rem;
+  font-size: 2.2rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .weather-info {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
   align-items: center;
-  gap: 0.5rem;
 }
 
 img {
-  width: 100px;
-  height: 100px;
-} 
+  width: 120px;
+  height: 120px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  justify-self: center;
+}
+
+.temperature {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin: 1rem 0;
+}
+
+.temperature p {
+  margin: 0.8rem 0;
+  font-size: 1.1rem;
+  color: #e6e6e6;
+}
+
+.temperature p:first-child {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.details {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+.details p {
+  margin: 0.8rem 0;
+  font-size: 1rem;
+  color: #e6e6e6;
+  line-height: 1.4;
+}
+
+button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  font-weight: 500;
+  backdrop-filter: blur(5px);
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.update-time {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 480px) {
+  .weather {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .weather h2 {
+    font-size: 1.8rem;
+  }
+  
+  .temperature p:first-child {
+    font-size: 2rem;
+  }
+}
