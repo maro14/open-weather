@@ -33,13 +33,12 @@ A modern, responsive weather application built with React, TypeScript, and Vite.
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/weather-app.git
-cd weather-app
+git clone https://github.com/maro14/weather-app.git
 ```
 
 2. Install dependencies:
 ```bash
-npm install
+pnpm install
 ```
 
 3. Create a `.env` file in the root directory and add your OpenWeatherMap API key:
@@ -49,19 +48,19 @@ VITE_WEATHER_API_KEY=your_api_key_here
 
 4. Start the development server:
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 ### Building for Production
 
 To create a production build:
 ```bash
-npm run build
+pnpm run build
 ```
 
 To preview the production build:
 ```bash
-npm run preview
+pnpm run preview
 ```
 
 ## Environment Variables
@@ -70,24 +69,6 @@ The following environment variables are required:
 
 - `VITE_WEATHER_API_KEY`: Your OpenWeatherMap API key
 
-## Project Structure
-
-```
-src/
-├── components/
-│   ├── LoadingSpinner/
-│   ├── SearchBar/
-│   ├── WeatherDisplay/
-│   └── RecentSearches/
-├── pages/
-│   └── WeatherPage/
-├── services/
-│   └── weatherApi.ts
-├── types/
-│   └── weather.ts
-└── hooks/
-    └── useRecentSearches.ts
-```
 
 ## Contributing
 
@@ -106,4 +87,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [OpenWeatherMap](https://openweathermap.org/) for providing the weather data API
 - [React Spinners](https://www.npmjs.com/package/react-spinners) for loading animations
 - [Vite](https://vitejs.dev/) for the build tooling
-
