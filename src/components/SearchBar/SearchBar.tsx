@@ -1,3 +1,4 @@
+// SearchBar.tsx
 import React, { useState } from 'react'
 import './SearchBar.css'
 
@@ -12,45 +13,56 @@ export function SearchBar({ onSearch, loading }: SearchBarProps) {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
-    if (city.trim()) {
+    const trimmedCity = city.trim()
+    
+    if (trimmedCity) {
       setError('')
-      onSearch(city.trim())
+      onSearch(trimmedCity)
     } else {
       setError('Please enter a city name')
     }
   }
 
+  const handleClear = () => {
+    setCity('')
+    setError('')
+  }
+
   return (
-    <form className="search-container" onSubmit={handleSearch}>
+    <form className="search-container" onSubmit={handleSearch} role="search">
       <input
-        id="cityInput"
-        type="text"
+        type="search"
+        id="citySearch"
         value={city}
         onChange={(e) => setCity(e.target.value)}
-        onKeyDown={(e) => e.key === 'Enter' && !loading && handleSearch(e)}
-        placeholder="Enter city name"
+        placeholder="Enter city name..."
         disabled={loading}
+        aria-label="Search for a city"
         aria-invalid={!!error}
-        aria-describedby={error ? "errorMessage" : undefined}
+        aria-describedby={error ? "searchError" : undefined}
       />
       <button 
         type="submit"
+        className="search-button"
         disabled={loading}
-        className={loading ? 'loading' : ''}
-        aria-label={loading ? 'Searching' : 'Get Weather'}
+        aria-label={loading ? 'Searching...' : 'Search weather'}
       >
         {loading ? 'Searching...' : 'Get Weather'}
       </button>
       <button 
         type="button"
-        onClick={() => setCity('')}
-        disabled={loading}
         className="clear-button"
-        aria-label="Clear"
+        onClick={handleClear}
+        disabled={loading || !city}
+        aria-label="Clear search"
       >
         Clear
       </button>
-      {error && <p id="errorMessage" className="error-message">{error}</p>}
+      {error && (
+        <p id="searchError" className="error-message" role="alert">
+          {error}
+        </p>
+      )}
     </form>
   )
 }

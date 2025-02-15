@@ -1,33 +1,158 @@
 .favorite-cities {
-  margin: 1rem 0;
-  padding: 1rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 0.5rem auto;
+  padding: 1.5rem;
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-cities h3 {
+  margin: 0 0 1.25rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .favorite-list {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin: 0 0 1rem 0;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
 }
 
 .favorite-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+}
+
+.favorite-item:hover {
+  background: rgba(255, 255, 255, 0.09);
+  transform: translateY(-1px);
 }
 
 .favorite-item button {
-  background: none;
-  border: none;
-  color: #646cff;
-  cursor: pointer;
-  padding: 0.25rem 0.5rem;
-  transition: all 0.2s;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
 }
 
-.favorite-item button:hover {
-  color: #ffffff;
-  text-decoration: underline;
+.favorite-item button:first-child {
+  padding: 0.5rem 0.75rem;
+  color: rgba(255, 255, 255, 0.9);
+  background: transparent;
+  border: none;
+  text-align: left;
+  flex: 1;
+}
+
+.favorite-item button:first-child:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.favorite-item button:last-child {
+  padding: 0.4rem 0.8rem;
+  background: rgba(255, 59, 48, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 59, 48, 0.2);
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.favorite-item button:last-child:hover {
+  background: rgba(255, 59, 48, 0.25);
+}
+
+.add-favorite {
+  margin-top: 0.5rem;
+}
+
+.add-favorite input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.add-favorite input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.add-favorite input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.add-favorite button {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(74, 144, 226, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(74, 144, 226, 0.3);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.add-favorite button:hover:not(:disabled) {
+  background: rgba(74, 144, 226, 0.25);
+  transform: translateY(-1px);
+}
+
+.add-favorite button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .favorite-cities {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  .favorite-cities h3 {
+    margin-bottom: 1rem;
+  }
+
+  .favorite-list {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .favorite-item {
+    padding: 0.6rem 0.75rem;
+  }
+
+  .favorite-item button:first-child {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .favorite-item button:last-child {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .add-favorite input {
+    padding: 0.6rem 0.75rem;
+  }
+
+  .add-favorite button {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
 }

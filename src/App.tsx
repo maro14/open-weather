@@ -1,9 +1,8 @@
 import { WeatherPage } from './pages/WeatherPage/WeatherPage'
-import './App.css'
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <WeatherPage />
     </div>
   )

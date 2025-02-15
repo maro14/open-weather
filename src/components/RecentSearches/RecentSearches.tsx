@@ -13,7 +13,7 @@ export function RecentSearches({ searches, onSelect, onClear }: RecentSearchesPr
     <div className="recent-searches">
       <div className="recent-header">
         <h3>Recent Searches</h3>
-        <button onClick={onClear} className="clear-button">
+        <button onClick={onClear} className="recent-clear-button">
           Clear
         </button>
       </div>
