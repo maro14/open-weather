@@ -30,7 +30,7 @@ export function WeatherDisplay({ weather }: WeatherDisplayProps) {
         <div className="temperature">
           <p>Temperature: {convertTemp(weather.main.temp)}{unitSymbol}</p>
           <p>Feels like: {convertTemp(weather.main.feels_like)}{unitSymbol}</p>
-          <button onClick={toggleUnit}>Switch to {useCelsius ? '°F' : '°C'}</button>
+          <button onClick={toggleUnit} className="temperature-switch-btn">Switch to {useCelsius ? '°F' : '°C'}</button>
         </div>
         <div className="details">
           <p>Conditions: {weather.weather[0].description}</p>
